@@ -1,0 +1,67 @@
+// Import fonts
+@import url("https://use.typekit.net/hub3pyj.css");
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,500,500i,700,700i');
+// Colors
+$blue: #25499c;
+$comet: #576074;
+$secondary: #00339F;
+$lochmara: #3067A8;
+$summer: #29ABE2;
+$grey: #f1f2f3;
+// Reset
+@tailwind preflight;
+// Basics
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+    fill: currentColor;
+}
+
+a {
+    @apply .text-blue;
+    &:hover {
+        @apply .text-blue-dark .no-underline;
+    }
+}
+
+[v-cloak] {
+    display: none;
+}
+
+// Components
+@import 'components/hamburger';
+@import 'components/off-canvas';
+@import 'components/decorations';
+@import 'components/buttons';
+@import 'components/brand-buttons';
+@import 'components/forms';
+@import 'components/modal';
+@import 'components/lists';
+@import 'components/typography';
+@import 'components/table';
+@import 'components/loader';
+
+// Utilities
+@tailwind utilities;
+.transition {
+    &-fast {
+        transition: all .2s ease;
+    }
+    &-medium {
+        transition: all .5s ease;
+    }
+    &-slow {
+        transition: all 1s ease;
+    }
+}
+
+.bg-backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fill-white {
+    fill: #fff;
+}

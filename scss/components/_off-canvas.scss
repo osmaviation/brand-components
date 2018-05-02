@@ -1,0 +1,7 @@
+.canvas-animate {
+    transform: translateX(100%);
+    transition: transform .5s ease;
+    &--active {
+        transform: translateX(0);
+    }
+}

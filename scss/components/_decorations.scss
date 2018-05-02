@@ -1,0 +1,15 @@
+.animated-decoration {
+    animation: animated-decoration 20s infinite;
+}
+
+@keyframes animated-decoration {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(-50px) translateY(-15px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}

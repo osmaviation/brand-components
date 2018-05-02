@@ -1,0 +1,27 @@
+.list {
+    @apply .list-reset .border-t .border-grey-light .-mx-4 .mb-4;
+    &-item {
+      @apply .border-b .border-grey-light .bg-white .mb-0;
+    }
+    &-item-container {
+      @apply .px-4 .py-8 .text-black .flex .items-center .no-underline;
+      &:hover {
+        @apply .bg-grey-lightest;
+      }
+    }
+    &-item-icon {
+      @apply .flex .justify-center .items-center .w-24;
+    }
+    &-item-title {
+      @apply .block .font-bold .mb-2;
+    }
+    &-item-sub-title {
+      @apply .block .text-sm .font-light;
+    }
+    &-item-link {
+      @apply .flex .w-24 .justify-end;
+    }
+    &-item-cheveron {
+      @apply .text-grey-darker .w-6 .h-6;
+    }
+  }

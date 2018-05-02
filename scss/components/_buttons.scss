@@ -1,0 +1,119 @@
+.btn {
+    @apply .inline-block .font-heading .text-sm .border .font-bold .uppercase .px-8 .py-4 .no-underline;
+    transition: color .5s ease, background-color .5s ease, border-color .5s ease;
+    &--sm {
+        @apply .inline-block .font-heading .text-xs .border .font-bold .uppercase .px-4 .py-2 .no-underline;
+    }
+    &--colored {
+        &__blue {
+            @apply .border-blue .text-white .bg-blue;
+            &:hover {
+                @apply .bg-blue-dark .border-blue-dark .text-white;
+            }
+        }
+        &__comet {
+            @apply .border-comet .text-white .bg-comet;
+            &:hover {
+                @apply .border-comet-dark .bg-comet-dark .text-white;
+            }
+        }
+        &__secondary {
+            @apply .border-secondary .text-white .bg-secondary;
+            &:hover {
+                @apply .border-secondary-dark .bg-secondary-dark .text-white;
+            }
+        }
+        &__lochmara {
+            @apply .border-lochmara .text-white .bg-lochmara;
+            &:hover {
+                @apply .border-lochmara-dark .bg-lochmara-dark .text-white;
+            }
+        }
+        &__summer {
+            @apply .border-summer .text-white .bg-summer;
+            &:hover {
+                @apply .border-summer-dark .bg-summer-dark .text-white;
+            }
+        }
+        &__grey {
+            @apply .border-brand-grey .text-blue .bg-brand-grey;
+            &:hover {
+                @apply .border-brand-grey-dark .bg-brand-grey-dark .text-blue;
+            }
+        }
+        &__red {
+            @apply .border-red .text-white .bg-red;
+            &:hover {
+                @apply .bg-red-dark .border-red-dark .text-white;
+            }
+        }
+        &__green {
+            @apply .border-green .text-white .bg-green;
+            &:hover {
+                @apply .bg-green-dark .border-green-dark .text-white;
+            }
+        }
+    }
+    &--outline {
+        &__blue {
+            @apply .border-blue .text-blue;
+            &:hover {
+                @apply .bg-blue .text-white
+            }
+        }
+        &__comet {
+            @apply .border-comet .text-comet;
+            &:hover {
+                @apply .bg-comet .text-white
+            }
+        }
+        &__secondary {
+            @apply .border-secondary .text-secondary;
+            &:hover {
+                @apply .bg-secondary .text-white
+            }
+        }
+        &__lochmara {
+            @apply .border-lochmara .text-lochmara;
+            &:hover {
+                @apply .bg-lochmara .text-white
+            }
+        }
+        &__summer {
+            @apply .border-summer .text-summer;
+            &:hover {
+                @apply .bg-summer .text-white
+            }
+        }
+        &__grey {
+            @apply .border-brand-grey .text-brand-grey-darker;
+            &:hover {
+                @apply .bg-brand-grey .text-black
+            }
+        }
+        &__red {
+            @apply .border-red .text-red;
+            &:hover {
+                @apply .bg-red .text-white
+            }
+        }
+        &__green {
+            @apply .border-green .text-green;
+            &:hover {
+                @apply .bg-green .text-white
+            }
+        }
+    }
+    &--invert {
+        @apply .border-white .text-blue .bg-white;
+        &:hover {
+            @apply .text-white .bg-blue;
+        }
+        &__outline {
+            @apply .border-white .text-white;
+            &:hover {
+                @apply .bg-white .text-blue;
+            }
+        }
+    }
+}
