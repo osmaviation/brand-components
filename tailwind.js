@@ -142,15 +142,15 @@ module.exports = {
     */
 
     textSizes: {
-        'xs': '.75rem',     // 12px
-        'sm': '.875rem',    // 14px
-        'base': '1rem',     // 16px
-        'lg': '1.125rem',   // 18px
-        'xl': '1.25rem',    // 20px
-        '2xl': '1.5rem',    // 24px
-        '3xl': '1.875rem',  // 30px
-        '4xl': '2.25rem',   // 36px
-        '5xl': '3rem',      // 48px
+        'xs': '.75rem', // 12px
+        'sm': '.875rem', // 14px
+        'base': '1rem', // 16px
+        'lg': '1.125rem', // 18px
+        'xl': '1.25rem', // 20px
+        '2xl': '1.5rem', // 24px
+        '3xl': '1.875rem', // 30px
+        '4xl': '2.25rem', // 36px
+        '5xl': '3rem', // 48px
     },
 
 
@@ -291,7 +291,9 @@ module.exports = {
     |
     */
 
-    borderColors: Object.assign({ default: colors['grey-light'] }, colors),
+    borderColors: Object.assign({
+        default: colors['grey-light']
+    }, colors),
 
 
     /*
@@ -712,51 +714,51 @@ module.exports = {
     */
 
     modules: {
-        appearance: ['responsive'],
-        backgroundAttachment: ['responsive'],
+        appearance: ['responsive', 'hover', 'group-hover', 'focus'],
+        backgroundAttachment: ['responsive', 'hover', 'group-hover', 'focus'],
         backgroundColors: ['responsive', 'hover', 'group-hover', 'focus'],
-        backgroundPosition: ['responsive'],
-        backgroundRepeat: ['responsive'],
-        backgroundSize: ['responsive'],
-        borderColors: ['responsive', 'hover'],
-        borderRadius: ['responsive'],
-        borderStyle: ['responsive'],
-        borderWidths: ['responsive'],
-        cursor: ['responsive'],
-        display: ['responsive'],
-        flexbox: ['responsive'],
-        float: ['responsive'],
-        fonts: ['responsive'],
-        fontWeights: ['responsive', 'hover'],
-        height: ['responsive'],
-        leading: ['responsive'],
-        lists: ['responsive'],
-        margin: ['responsive'],
-        maxHeight: ['responsive'],
-        maxWidth: ['responsive'],
-        minHeight: ['responsive'],
-        minWidth: ['responsive'],
-        negativeMargin: ['responsive'],
-        opacity: ['responsive'],
-        overflow: ['responsive'],
-        padding: ['responsive'],
-        pointerEvents: ['responsive'],
-        position: ['responsive'],
-        resize: ['responsive'],
-        shadows: ['responsive'],
+        backgroundPosition: ['responsive', 'hover', 'group-hover', 'focus'],
+        backgroundRepeat: ['responsive', 'hover', 'group-hover', 'focus'],
+        backgroundSize: ['responsive', 'hover', 'group-hover', 'focus'],
+        borderColors: ['responsive', 'hover', 'group-hover', 'focus'],
+        borderRadius: ['responsive', 'hover', 'group-hover', 'focus'],
+        borderStyle: ['responsive', 'hover', 'group-hover', 'focus'],
+        borderWidths: ['responsive', 'hover', 'group-hover', 'focus'],
+        cursor: ['responsive', 'hover', 'group-hover', 'focus'],
+        display: ['responsive', 'hover', 'group-hover', 'focus'],
+        flexbox: ['responsive', 'hover', 'group-hover', 'focus'],
+        float: ['responsive', 'hover', 'group-hover', 'focus'],
+        fonts: ['responsive', 'hover', 'group-hover', 'focus'],
+        fontWeights: ['responsive', 'hover', 'group-hover', 'focus'],
+        height: ['responsive', 'hover', 'group-hover', 'focus'],
+        leading: ['responsive', 'hover', 'group-hover', 'focus'],
+        lists: ['responsive', 'hover', 'group-hover', 'focus'],
+        margin: ['responsive', 'hover', 'group-hover', 'focus'],
+        maxHeight: ['responsive', 'hover', 'group-hover', 'focus'],
+        maxWidth: ['responsive', 'hover', 'group-hover', 'focus'],
+        minHeight: ['responsive', 'hover', 'group-hover', 'focus'],
+        minWidth: ['responsive', 'hover', 'group-hover', 'focus'],
+        negativeMargin: ['responsive', 'hover', 'group-hover', 'focus'],
+        opacity: ['responsive', 'hover', 'group-hover', 'focus'],
+        overflow: ['responsive', 'hover', 'group-hover', 'focus'],
+        padding: ['responsive', 'hover', 'group-hover', 'focus'],
+        pointerEvents: ['responsive', 'hover', 'group-hover', 'focus'],
+        position: ['responsive', 'hover', 'group-hover', 'focus'],
+        resize: ['responsive', 'hover', 'group-hover', 'focus'],
+        shadows: ['responsive', 'hover', 'group-hover', 'focus'],
         svgFill: [],
         svgStroke: [],
-        textAlign: ['responsive'],
-        textColors: ['responsive', 'hover', 'group-hover'],
-        textSizes: ['responsive'],
-        textStyle: ['responsive', 'hover'],
-        tracking: ['responsive'],
-        userSelect: ['responsive'],
-        verticalAlign: ['responsive'],
-        visibility: ['responsive'],
-        whitespace: ['responsive'],
-        width: ['responsive'],
-        zIndex: ['responsive'],
+        textAlign: ['responsive', 'hover', 'group-hover', 'focus'],
+        textColors: ['responsive', 'hover', 'group-hover', 'focus'],
+        textSizes: ['responsive', 'hover', 'group-hover', 'focus'],
+        textStyle: ['responsive', 'hover', 'group-hover', 'focus'],
+        tracking: ['responsive', 'hover', 'group-hover', 'focus'],
+        userSelect: ['responsive', 'hover', 'group-hover', 'focus'],
+        verticalAlign: ['responsive', 'hover', 'group-hover', 'focus'],
+        visibility: ['responsive', 'hover', 'group-hover', 'focus'],
+        whitespace: ['responsive', 'hover', 'group-hover', 'focus'],
+        width: ['responsive', 'hover', 'group-hover', 'focus'],
+        zIndex: ['responsive', 'hover', 'group-hover', 'focus'],
     },
 
     /*
