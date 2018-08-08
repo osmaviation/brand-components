@@ -1,21 +1,21 @@
 <template>
     <div class="md:flex md:flex-row-reverse items-center mb-8 mx-4">
         <div class="w-full mb-4 md:mb-0 md:w-1/2 relative md:pl-8" v-if="image">
-            <img :src="image" alt=""/>
-            <svg 
-                v-if="decoration === 'top' || decoration === 'bottom'"
-                xmlns="http://www.w3.org/2000/svg" 
-                viewBox="0 202.962 500 94.076" 
-                class="text-blue absolute -ml-8 pin-l w-3/4 animated-decoration" 
-                :class="{'pin-t mt-8': decoration === 'top', 'pin-b mb-8': decoration === 'bottom'}">
+            <img :src="image" alt="" :class="rounded ? 'rounded-full' : ''" class="w-full"/>
+            <svg
+                    v-if="decoration === 'top' || decoration === 'bottom'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 202.962 500 94.076"
+                    class="text-blue absolute -ml-8 pin-l w-3/4 animated-decoration"
+                    :class="{'pin-t mt-8': decoration === 'top', 'pin-b mb-8': decoration === 'bottom'}">
                 <path d="M500 292.07v2.27l-3.22 2.7h-2.7M500 282.58v2.26l-14.55 12.2h-2.7M500 273.08v2.27l-25.87 21.7h-2.7M500 263.6v2.25l-37.2 31.2h-2.7M500 254v2.36l-48.52 40.68h-2.7M500 244.5v2.36l-59.84 50.18h-2.7M500 235.02v2.35l-71.17 59.67h-2.7M500 225.52v2.27l-82.5 69.24h-2.7M500 216.03v2.26l-93.81 78.74h-2.72M500 206.53v2.27l-105.14 88.24h-2.7M495.64 202.96l-112.1 94.08h-2.7l112.1-94.08M484.32 202.96l-112.1 94.08h-2.7l112.1-94.08M473 202.96l-112.1 94.08h-2.7l112.1-94.08M461.67 202.96l-112.1 94.08h-2.7l112.1-94.08M450.35 202.96l-112.1 94.08h-2.7l112.1-94.08M439.02 202.96l-112.1 94.08h-2.7l112.1-94.08M427.7 202.96l-112.1 94.08h-2.7L425 202.96M416.38 202.96l-112.1 94.08h-2.7l112.1-94.08M405.05 202.96l-112.1 94.08h-2.7l112.1-94.08M393.73 202.96l-112.1 94.08h-2.7l112.1-94.08M382.4 202.96l-112.1 94.08h-2.7l112.1-94.08M371.08 202.96l-112.1 94.08h-2.7l112.1-94.08M359.76 202.96l-112.1 94.08h-2.7l112.1-94.08M348.43 202.96l-112.1 94.08h-2.7l112.1-94.08M337.1 202.96L225 297.04h-2.7l112.1-94.08M325.78 202.96l-112.1 94.08h-2.7l112.1-94.08M314.46 202.96l-112.1 94.08h-2.7l112.1-94.08M303.14 202.96l-112.1 94.08h-2.7l112.1-94.08M291.8 202.96l-112.1 94.08H177l112.1-94.08M280.5 202.96l-112.12 94.08h-2.7l112.1-94.08M269.16 202.96l-112.1 94.08h-2.7l112.1-94.08M257.84 202.96l-112.1 94.08h-2.7l112.1-94.08M246.52 202.96l-112.1 94.08h-2.7l112.1-94.08M235.2 202.96l-112.12 94.08h-2.7l112.1-94.08M223.87 202.96l-112.1 94.08h-2.7l112.1-94.08M212.54 202.96l-112.1 94.08h-2.7l112.1-94.08M201.22 202.96l-112.1 94.08h-2.7l112.1-94.08M189.9 202.96L77.8 297.04h-2.7l112.1-94.08M178.57 202.96l-112.1 94.08h-2.7l112.1-94.08M167.25 202.96l-112.1 94.08h-2.7l112.1-94.08M155.92 202.96l-112.1 94.08h-2.7l112.1-94.08M144.6 202.96L32.5 297.04h-2.7l112.1-94.08M133.28 202.96l-112.1 94.08h-2.7l112.1-94.08M121.95 202.96L9.85 297.04h-2.7l112.1-94.08M110.63 202.96L0 295.82v-2.26l107.93-90.6M99.3 202.96L0 286.32v-2.26l96.6-81.1M87.98 202.96L0 276.83v-2.35l85.28-71.52M76.66 202.96L0 267.26v-2.28l73.95-62.02M65.33 202.96L0 257.76v-2.27l62.63-52.54M54 202.96l-54 45.3V246l51.3-43.04M42.68 202.96L0 238.76v-2.26l39.98-33.54M31.36 202.96L0 229.26V227l28.66-24.04M20.04 202.96L0 219.76v-2.25l17.33-14.54M8.7 202.96L0 210.28V208l6-5.04"></path>
             </svg>
         </div>
-        <div class="md:flex-1" :class="{'pr-8': image}">
+        <div class="md:flex-1 " :class="{'pr-8': image}">
             <h2 class="font-heading text-3xl md:text-5xl uppercase font-bold mb-4 md:mb-8 leading-normal">
                 <slot name="title"></slot>
             </h2>
-            <div class="text-xl font-thin pb-4 leading-normal">
+            <div class="text-xl font-thin pb-4 leading-normal max-w-lg">
                 <slot></slot>
             </div>
             <div>
@@ -26,18 +26,23 @@
 </template>
 
 <script>
-export default {
-    props: {
-        image: {
-            default() {
-                return false
-            }
-        },
-        decoration: {
-            default() {
-                return false
+    export default {
+        props: {
+            image: {
+                default() {
+                    return false
+                }
+            },
+            rounded: {
+                default() {
+                    return false
+                }
+            },
+            decoration: {
+                default() {
+                    return false
+                }
             }
         }
     }
-}
 </script>

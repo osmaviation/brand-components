@@ -360,6 +360,7 @@ module.exports = {
         '48': '12rem',
         '64': '16rem',
         'canvas': '400px',
+        'canvas-md': '600px',
         '1/2': '50%',
         '1/3': '33.33333%',
         '2/3': '66.66667%',
@@ -793,4 +794,25 @@ module.exports = {
         separator: ':',
     },
 
+
+    plugins: [
+        require('./plugins/object-fit'),
+        require('tailwindcss-spinner')({
+            name: 'spinner-blue', // change class name
+            color: 'blue', // color from config to make it
+        }),
+        require('tailwindcss-spinner')({
+            name: 'spinner-white', // change class name
+            color: 'white', // color from config to make it
+        }),
+        require('tailwindcss-aspect-ratio')({
+            ratios: {
+              'square': [1, 1],
+              '16/9': [16, 9],
+              '4/3': [4, 3],
+              '21/9': [21, 9],
+            },
+            variants: ['responsive', 'hover'],
+          })
+    ]
 }

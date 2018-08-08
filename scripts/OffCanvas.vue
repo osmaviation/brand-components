@@ -2,7 +2,7 @@
 <transition name="canvas">
     <div class="canvas-container z-50" v-if="show">
         <div class="canvas-backdrop bg-white opacity-75 fixed pin-y pin-x z-40" @click="close"></div>
-        <div class="canvas z-50 w-full md:w-canvas bg-blue fixed pin-y pin-r overflow-hidden overflow-y-auto">
+        <div class="canvas z-50 w-full md:w-canvas-md bg-blue fixed pin-y pin-r overflow-hidden overflow-y-auto">
             
             <a class="hover:text-white text-white fixed pin-y pin-r mt-8 mr-8" href="#" @click.prevent="close">
                 <svg class="hamburger h-8 w-8 hamburger--close" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">

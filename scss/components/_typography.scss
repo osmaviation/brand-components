@@ -4,41 +4,57 @@ h3,
 h4,
 h5,
 h6 {
-    @apply .leading-normal .mb-2 .mt-2 .font-heading .font-bold .uppercase;
+  @apply .leading-normal .mb-2 .mt-2 .font-heading .font-bold .uppercase;
 }
 
 p,
 li {
-    @apply .leading-normal .mb-2 .text-lg .font-light;
+  @apply .leading-normal .mb-2 .text-lg .font-light;
 }
 
 b,
 strong {
-    @apply .font-bold;
+  @apply .font-bold;
 }
 
 blockquote {
-    @apply .p-4 .pb-2 .my-4 .relative .border-l .border-blue-light .relative;
-    quotes: "\201C""\201D""\2018""\2019";
-    p {
-        @apply .font-hairline .text-grey-darker;
-        width: calc(100% - 90px);
-        display: block;
-        &:before {
-            content: open-quote;
-            opacity: 0;
-            position: absolute;
-            visibility: hidden;
-        }
-        &:after {
-            content: close-quote;
-            font-weight: bold;
-            font-size: 200px;
-            @apply .text-grey-light;
-            position: absolute;
-            top: 0;
-            right: 0;
-            line-height: 0.8;
-        }
+  @apply .p-4 .pb-2 .my-4 .relative .border-l .border-blue-light .relative;
+  quotes: "\201C""\201D""\2018""\2019";
+  p {
+    @apply .font-hairline .text-grey-darker;
+    width: calc(100% - 90px);
+    display: block;
+    &:before {
+      content: open-quote;
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
     }
+    &:after {
+      content: close-quote;
+      font-weight: bold;
+      font-size: 200px;
+      @apply .text-grey-light;
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: 0.8;
+    }
+  }
+}
+
+.stretch-bg {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    @apply .bg-grey-light;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
 }

@@ -1,136 +1,134 @@
 $button-height: 60px;
 $button-width: 220px;
 
-@mixin button ($border-color, $text-color, $border-hover-color, $text-hover-color, $background: transparent, $background-hover: transparent) {
-	@apply .mr-2;
-	appearance: none;
-    background-color: $background;
-	border-radius: 0;
-	padding: 0;
-	display: inline-block;
-	border: 1px solid $border-color;
-	outline: none;
-	position: relative;
-	font-size: 16px;
-	text-transform: uppercase;
-	font-weight: bold;
-	width: $button-width;
-	height: $button-height;
-	cursor: pointer;
-    transition: background-color 1s ease, border-color 1s ease;
-    * {
-        pointer-events: none;
-    }
-	.brand-button-border {
-		width: $button-width + 2;
-		height: $button-height + 2;
-		position: absolute;
-		right: 0;
-		left: 0;
-		margin-left: 0;
-		top: -2px;
+@mixin button($border-color, $text-color, $border-hover-color, $text-hover-color, $background: transparent, $background-hover: transparent) {
+  @apply .mr-2;
+  appearance: none;
+  background-color: $background;
+  border-radius: 0;
+  padding: 0;
+  display: inline-block;
+  border: 1px solid $border-color;
+  outline: none;
+  position: relative;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: $button-width;
+  height: $button-height;
+  cursor: pointer;
+  transition: background-color 1s ease, border-color 1s ease;
+  * {
+    pointer-events: none;
+  }
+  .brand-button-border {
+    width: $button-width + 2;
+    height: $button-height + 2;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-left: 0;
+    top: -2px;
 
-		&__shape {
-			width: 100%;
-			height: $button-height + 2;
-			stroke-dasharray: 200 540;
-			stroke-dashoffset: 570;
-			stroke-width: 6px;
-			fill: transparent;
-			stroke: $border-color;
-		}
-	}
-	.brand-button-label {
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 100%;
-		color: $text-color;
-		text-align: center;
-		transform: translateY(-50%);
-        transition: color 1s ease;
-        @apply .font-heading;
-        @apply .text-base;
-		svg {
-			width: 20px;
-			height: 20px;
-		}
-	}
-	&:hover, &.is-active {
-		background-color: $background-hover;
-		border-color: $border-hover-color;
-		.brand-button-label {
-			color: $text-hover-color;
-		}
-		.brand-button-border {
-			&__shape {
-				stroke: $border-hover-color;
-			}
-		}
+    &__shape {
+      width: 100%;
+      height: $button-height + 2;
+      stroke-dasharray: 200 540;
+      stroke-dashoffset: 570;
+      stroke-width: 6px;
+      fill: transparent;
+      stroke: $border-color;
     }
-    @media only screen and (max-width: 768px) {
-        width: 120px !important;
-        height: 43.5px !important;
-        .brand-button-label {
-            @apply .text-sm;
-        }
-        .brand-button-border {
-            top: 2px;
-            width: 123px !important;
-            left: -2px;
-            transform: scaleY(1.3);
-            height: 38px !important;
-        }
+  }
+  .brand-button-label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: $text-color;
+    text-align: center;
+    transform: translateY(-50%);
+    transition: color 1s ease;
+    @apply .font-heading .font-normal .text-base;
+    svg {
+      width: 20px;
+      height: 20px;
     }
+  }
+  &:hover, &.is-active {
+    background-color: $background-hover;
+    border-color: $border-hover-color;
+    .brand-button-label {
+      color: $text-hover-color;
+    }
+    .brand-button-border {
+      &__shape {
+        stroke: $border-hover-color;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    width: 120px !important;
+    height: 43.5px !important;
+    .brand-button-label {
+      @apply .text-sm;
+    }
+    .brand-button-border {
+      top: 2px;
+      width: 123px !important;
+      left: -2px;
+      transform: scaleY(1.3);
+      height: 38px !important;
+    }
+  }
 }
 
 .brand-button {
-    &--black {
-        @include button(#000000, #000000, $blue, $blue);
-    }
-    &--blue {
-        @include button($blue, $blue, $blue, $blue);
-    }
-    &--comet {
-        @include button($comet, $comet, $comet, $comet);
-    }
-    &--secondary {
-        @include button($secondary, $secondary, $secondary, $secondary);
-    }
-    &--lochmara {
-        @include button($lochmara, $lochmara, $lochmara, $lochmara);
-    }
-    &--summer {
-        @include button($summer, $summer, $summer, $summer);
-    }
-    &--grey {
-        @include button($grey, #000000, $grey, #000000);
-	}
-	&--filled__black {
-		@include button(#000000, #FFFFFF, $blue, #FFFFFF, #000000, $blue);
-	}
-	&--filled__blue {
-		@include button($blue, #FFFFFF, $blue, #FFFFFF, $blue, $blue);
-	}
-	&--filled__comet {
-		@include button($comet, #FFFFFF, $comet, #FFFFFF, $comet, $comet);
-	}
-	&--filled__secondary {
-		@include button($secondary, #FFFFFF, $secondary, #FFFFFF, $secondary, $secondary);
-	}
-	&--filled__lochmara {
-		@include button($lochmara, #FFFFFF, $lochmara, #FFFFFF, $lochmara, $lochmara);
-	}
-	&--filled__summer {
-		@include button($summer, #FFFFFF, $summer, #FFFFFF, $summer, $summer);
-	}
-	&--filled__grey {
-		@include button($grey, #000000, $grey, #000000, $grey, $grey);
-	}
-    &--invert {
-        @include button(#FFFFFF, $blue, #FFFFFF, #FFFFFF, #FFFFFF);
-    }
-    &--invert__outline {
-        @include button(#FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF);
-    }
+  &--black {
+    @include button(#000000, #000000, $blue, $blue);
+  }
+  &--blue {
+    @include button($blue, $blue, $blue, $blue);
+  }
+  &--comet {
+    @include button($comet, $comet, $comet, $comet);
+  }
+  &--secondary {
+    @include button($secondary, $secondary, $secondary, $secondary);
+  }
+  &--lochmara {
+    @include button($lochmara, $lochmara, $lochmara, $lochmara);
+  }
+  &--summer {
+    @include button($summer, $summer, $summer, $summer);
+  }
+  &--grey {
+    @include button($grey, #000000, $grey, #000000);
+  }
+  &--filled__black {
+    @include button(#000000, #FFFFFF, $blue, #FFFFFF, #000000, $blue);
+  }
+  &--filled__blue {
+    @include button($blue, #FFFFFF, $blue, #FFFFFF, $blue, $blue);
+  }
+  &--filled__comet {
+    @include button($comet, #FFFFFF, $comet, #FFFFFF, $comet, $comet);
+  }
+  &--filled__secondary {
+    @include button($secondary, #FFFFFF, $secondary, #FFFFFF, $secondary, $secondary);
+  }
+  &--filled__lochmara {
+    @include button($lochmara, #FFFFFF, $lochmara, #FFFFFF, $lochmara, $lochmara);
+  }
+  &--filled__summer {
+    @include button($summer, #FFFFFF, $summer, #FFFFFF, $summer, $summer);
+  }
+  &--filled__grey {
+    @include button($grey, #000000, $grey, #000000, $grey, $grey);
+  }
+  &--invert {
+    @include button(#FFFFFF, $blue, #FFFFFF, #FFFFFF, #FFFFFF);
+  }
+  &--invert__outline {
+    @include button(#FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF);
+  }
 }

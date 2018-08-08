@@ -21,6 +21,11 @@ module.exports = {
      */
     'transparent': 'transparent',
     'black': '#22292f',
+    'black-opacity-90': 'rgba(0,0,0,0.1)',
+    'black-opacity-70': 'rgba(0,0,0,0.3)',
+    'black-opacity-50': 'rgba(0,0,0,0.5)',
+    'black-opacity-25': 'rgba(0,0,0,0.75)',
+    'black-opacity-10': 'rgba(0,0,0,0.90)',
     'white': '#ffffff',
 
     /** 
