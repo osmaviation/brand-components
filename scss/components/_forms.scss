@@ -65,7 +65,7 @@
   span {
     font-size: 16px;
     cursor: pointer;
-    @apply . relative . pl-8 . font-normal . text-black . leading-normal . font-heading . uppercase . text-base;
+    @apply .relative .pl-8 .font-normal .text-black .leading-normal .font-heading .uppercase .text-base;
     &:before {
       content: "\00d7";
       margin-top: -2px;
