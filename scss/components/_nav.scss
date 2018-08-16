@@ -1,0 +1,23 @@
+.nav-item {
+  @apply h-full items-center flex pin-t pin-l;
+}
+
+.footer-nav {
+  .nav-item {
+    @apply text-grey;
+  }
+
+  .router-link-exact-active {
+    @apply text-blue;
+  }
+}
+
+.header-nav {
+  .nav-item {
+    @apply text-white;
+  }
+
+  .router-link-exact-active {
+    box-shadow: inset 0 -2px 0 0 white;
+  }
+}

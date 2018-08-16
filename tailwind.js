@@ -43,6 +43,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
+var _ = require('lodash')
 var colors = require('./tailwind/colors.js')
 
 module.exports = {
@@ -142,6 +143,7 @@ module.exports = {
     */
 
     textSizes: {
+        'xxs': '.625rem', //
         'xs': '.75rem', // 12px
         'sm': '.875rem', // 14px
         'base': '1rem', // 16px
@@ -291,7 +293,11 @@ module.exports = {
     |
     */
 
-    borderColors: Object.assign({
+    // borderColors: Object.assign({
+    //     default: colors['grey-light']
+    // }, colors),
+
+    borderColors: _.assign({
         default: colors['grey-light']
     }, colors),
 
@@ -345,7 +351,7 @@ module.exports = {
         'auto': 'auto',
         'px': '1px',
         '2px': '2px',
-        '2px': '3px',
+        '3px': '3px',
         '1': '0.25rem',
         '2': '0.5rem',
         '3': '0.75rem',
@@ -355,7 +361,9 @@ module.exports = {
         '10': '2.5rem',
         '12': '3rem',
         '16': '4rem',
+        '20': '5rem',
         '24': '6rem',
+        '28': '7rem',
         '32': '8rem',
         '48': '12rem',
         '64': '16rem',
@@ -404,7 +412,9 @@ module.exports = {
         '10': '2.5rem',
         '12': '3rem',
         '16': '4rem',
+        '20': '5rem',
         '24': '6rem',
+        '28': '7rem',
         '32': '8rem',
         '48': '12rem',
         '64': '16rem',
@@ -553,7 +563,7 @@ module.exports = {
     */
 
     margin: {
-        'auto' : 'auto',
+        'auto': 'auto',
         'px': '1px',
         '0': '0',
         '1': '0.25rem',
@@ -807,12 +817,20 @@ module.exports = {
         }),
         require('tailwindcss-aspect-ratio')({
             ratios: {
-              'square': [1, 1],
-              '16/9': [16, 9],
-              '4/3': [4, 3],
-              '21/9': [21, 9],
+                'square': [1, 1],
+                '16/9': [16, 9],
+                '4/3': [4, 3],
+                '21/9': [21, 9],
             },
             variants: ['responsive', 'hover'],
-          })
-    ]
+        }),
+        require('tailwindcss-plugins/gradients')({
+            gradients: {
+                'app': [colors['blue-light'], colors['blue']],
+            },
+            variants: ['responsive', 'hover']
+        }),
+
+        // ...
+    ],
 }

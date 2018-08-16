@@ -9,15 +9,22 @@
 }
 
 .input {
-  @apply .border-b .w-full .p-2 .font-light .block .appearance-none .border-blue;
+  @apply .w-full .p-2 .font-light .block .appearance-none;
   transition: background-color .5s ease;
   &:hover,
   &:focus {
     @apply .bg-grey-lighter;
   }
+  border-bottom: 1px solid transparent;
+  background-color: rgba(37, 73, 156, .1);
+  border-radius: 0px;
+  &:hover, &:active {
+    background-color: rgba(37, 73, 156, .2)
+  }
 
   &--invert {
-    @apply .border-white .bg-transparent .text-white;
+    @apply .border-white .bg-transparent;
+
     &:hover,
     &:focus {
       background-color: transparentize($color: #ffffff, $amount: 0.9);
@@ -58,15 +65,13 @@
   span {
     font-size: 16px;
     cursor: pointer;
-    @apply .relative .block .font-normal .text-black .leading-normal .font-body .normal-case .text-sm .flex .items-center;
+    @apply . relative . pl-8 . font-normal . text-black . leading-normal . font-heading . uppercase . text-base;
     &:before {
       content: "\00d7";
+      margin-top: -2px;
       font-style: normal;
       transition: opacity .5s ease, color .5s;
-      @apply .opacity-50 .text-transparent .font-normal .text-lg .mr-4 .border .border-brand-grey-darker .text-brand-grey .flex .items-center .justify-center;
-      min-width: 24px;
-      width: 24px;
-      height: 24px;
+      @apply .opacity-50 .text-transparent .font-normal .w-6 .h-6 .text-lg .block .absolute .pin-l .pin-t .border .border-brand-grey-darker .text-brand-grey .flex .items-center .justify-center;
     }
   }
   input[type="checkbox"]:checked ~ span:before {
@@ -93,19 +98,25 @@
   height: 33px;
   padding: 0 20px 0 10px;
   width: 100% !important;
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
 }
 
 .v-select .dropdown-toggle {
   border: none !important;
-  border-bottom: 1px solid #24499c !important;
-  background-color: #fff;
+  background-color: rgba(37, 73, 156, .1) !important;
   border-radius: 0px !important;
   padding-bottom: 1px;
+  &:hover,
+  &:active {
+    background-color: rgba(37, 73, 156, .2) !important;
+  }
 }
 
-.v-select .dropdown-toggle {
-  display: flex !important;
-  flex-wrap: wrap;
+.v-select.open .dropdown-toggle {
+  background-color: rgba(37, 73, 156, .1) !important;
 }
 
 .v-select.invert {

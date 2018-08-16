@@ -1,10 +1,10 @@
 export default {
-    mounted() {
+    mounted: function() {
         document.addEventListener("keydown", this.recordKeys);
     },
 
     methods: {
-        recordKeys(e) {
+        recordKeys: function(e) {
             if (e.keyCode == 27) { 
                 this.$emit('key:esc')
             }

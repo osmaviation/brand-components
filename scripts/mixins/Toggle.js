@@ -1,21 +1,21 @@
 export default {
 
-    data() {
+    data: function() {
         return {
             show: false,
         }
     },
     
     methods: {
-        close() {
+        close: function() {
             this.show = false
             this.$emit('close')
         },
-        open() {
+        open: function() {
             this.show = true
             this.$emit('open')
         },
-        toggle() {
+        toggle: function() {
             if (this.show) {
                 this.close()
             } else {

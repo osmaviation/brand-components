@@ -1,6 +1,6 @@
 export default {
     methods: {
-        handleClick(e) {
+        handleClick: function(e) {
             this.$emit('click', e)
         }
     }
