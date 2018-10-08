@@ -30,6 +30,10 @@
                 <span class="block text-md font-bold"><slot name="title"></slot></span>
                 <span class="block text-sm font-light"><slot name="sub-title"></slot></span>
             </span>
+
+            <span class="flex justify-center items-center" v-if="$slots.status">
+                <slot name="status"></slot>
+            </span>
         </span>
     </li>
 </template>

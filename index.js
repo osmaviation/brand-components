@@ -13,7 +13,6 @@ import ModalSidebarLink from './scripts/ModalSidebarLink.vue'
 import OffCanvas from './scripts/OffCanvas.vue'
 import OffCanvasMenu from './scripts/OffCanvasMenu.vue'
 import OffCanvasMenuItem from './scripts/OffCanvasMenuItem.vue'
-import tailwind from './tailwind'
 
 /** 
  * Vue Plugin
@@ -40,5 +39,4 @@ const OSMAviation = {
 
 export {
     OSMAviation,
-    tailwind
 }
