@@ -8,6 +8,14 @@
   }
 }
 
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[type='time'],
+input[type='password'] {
+  height: 2.1875rem;
+}
+
 .input {
   @apply .w-full .p-2 .font-light .block .appearance-none;
   transition: background-color .5s ease;
@@ -50,7 +58,6 @@
     pointer-events: none;
   }
   select {
-    background: transparent;
     border-radius: 0px;
   }
 }
@@ -89,6 +96,11 @@
       @apply .text-white;
     }
   }
+}
+
+.v-select {
+  font-family: Lato, sans-serif;
+  font-weight: 300;
 }
 
 .v-select input[type=search],
@@ -136,4 +148,11 @@
       color: #fff;
     }
   }
+}
+
+.v-select.dropup .dropdown-menu {
+  bottom: 100% !important;
+  top: auto !important;
+  box-shadow: 3px 0 6px 0 rgba(0,0,0,.15);
+  border-radius: 4px 4px 0 0;
 }

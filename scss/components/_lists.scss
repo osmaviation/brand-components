@@ -5,9 +5,9 @@
   }
   &-item-container {
     @apply .px-4 .py-8 .text-black .flex .items-center .no-underline;
-    &:hover {
-      @apply .bg-grey-lightest;
-    }
+  }
+  a.list-item-container:hover {
+    @apply .bg-grey-lightest;
   }
   &-item-icon {
     @apply .flex .items-center .w-16;

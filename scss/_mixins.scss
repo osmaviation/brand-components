@@ -1,0 +1,25 @@
+// Regular, Solid Button Mixin
+@mixin solid-button-variant($color, $textColor: 'white') {
+    @apply .border-#{$color} .text-#{$textColor} .bg-#{$color};
+
+    &:hover {
+        @apply .bg-#{$color}-dark .border-#{$color}-dark .text-white;
+    }
+
+    [disabled], &.disabled {
+        @apply .bg-#{$color}-lighter .border-#{$color}-lighter;
+
+        &:hover {
+            @apply .cursor-not-allowed
+        }
+    }
+}
+
+// Outline Button Mixin
+@mixin outline-button-variant($color, $textColor: 'white') {
+    @apply .border-#{$color} .text-#{$color};
+
+    &:hover {
+        @apply .bg-#{$color} .text-#{$textColor}
+    }
+}
