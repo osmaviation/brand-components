@@ -1,0 +1,221 @@
+.pika-single {
+    z-index: 9999;
+    display: block;
+    position: relative;
+    margin-left: 7px;
+    @apply font-body text-grey-darkest bg-white border border-grey-light;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+    content: " ";
+    display: table;
+}
+
+.pika-single:after {
+    clear: both;
+}
+
+.pika-single {
+    *zoom: 1;
+}
+
+.pika-single.is-hidden {
+    display: none;
+}
+
+.pika-single.is-bound {
+    position: absolute;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+}
+
+.pika-lendar {
+    width: 400px;
+    margin: 8px;
+}
+
+@media (max-width: 786px) {
+    .pika-lendar {
+        width: 300px;
+    }
+}
+
+.pika-title {
+    position: relative;
+    text-align: center;
+}
+
+.pika-label {
+    display: inline-block;
+    *display: inline;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px 3px;
+    line-height: 20px;
+    font-weight: bold;
+    @apply bg-white text-base;
+}
+
+.pika-title select {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9998;
+    margin: 0;
+    left: 0;
+    top: 5px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    border: 0;
+    padding: 0;
+    width: 20px;
+    height: 30px;
+    /* hide text using text-indent trick, using width value (it's enough) */
+    text-indent: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    opacity: .5;
+    *position: absolute;
+    *top: 0;
+}
+
+.pika-prev:hover,
+.pika-next:hover {
+    opacity: 1;
+}
+
+.pika-prev,
+.is-rtl .pika-next {
+    float: left;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+    *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+    float: right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+    *right: 0;
+}
+
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+    cursor: default;
+    opacity: .2;
+}
+
+.pika-select {
+    display: inline-block;
+    *display: inline;
+}
+
+.pika-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+}
+
+.pika-table th,
+.pika-table td {
+    width: 14.285714285714286%;
+    padding: 0;
+}
+
+.pika-table th {
+    line-height: 35px;
+    font-weight: bold;
+    text-align: center;
+    @apply text-grey text-sm;
+}
+
+.pika-button {
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    line-height: 15px;
+    text-align: center;
+    @apply bg-grey-lightest text-grey-darker text-sm p-3;
+}
+
+.pika-week {
+    @apply text-grey text-sm;
+}
+
+.is-today .pika-button {
+    font-weight: bold;
+    @apply text-blue;
+}
+
+.is-selected .pika-button,
+.has-event .pika-button {
+    font-weight: bold;
+    @apply text-white bg-blue rounded-none;
+}
+
+.has-event .pika-button {
+    @apply bg-blue-darkest;
+}
+
+.is-startrange .pika-button {
+    box-shadow: none;
+    @apply text-white bg-blue-dark rounded-none;
+}
+
+.is-endrange .pika-button {
+    box-shadow: none;
+    @apply text-white bg-blue-dark rounded-none;
+}
+
+.is-disabled .pika-button {
+    pointer-events: none;
+    cursor: default;
+    opacity: .3;
+    @apply text-grey;
+}
+
+.is-outside-current-month .pika-button {
+    opacity: .3;
+    @apply text-grey;
+}
+
+.is-selection-disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+.pika-button:hover,
+.pika-row.pick-whole-week:hover .pika-button {
+    box-shadow: none;
+    border-radius: 3px;
+    @apply text-white rounded-none bg-blue-dark;
+}
+
+/* styling for abbr */
+.pika-table abbr {
+    border-bottom: none;
+    cursor: help;
+    text-decoration: none;
+}

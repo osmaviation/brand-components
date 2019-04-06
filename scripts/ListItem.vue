@@ -1,10 +1,10 @@
 <template>
     <li class="list-item">
-        <a class="list-item-container cursor-pointer" :href="url" @click="handleClick" v-if="url">
+        <a class="list-item-container cursor-pointer" :href="url" @click="handleClick" v-if="url" :target="target">
             <span class="flex w-16 items-center " v-if="$slots.icon">
                 <slot name="icon"></slot>
             </span>
-            <span class="flex-1">
+            <span class="flex-1 overflow-hidden">
                 <span class="block text-md font-bold"><slot name="title"></slot></span>
                 <span class="block text-sm font-light" v-if="$slots['sub-title']"><slot name="sub-title"></slot></span>
             </span>
@@ -18,8 +18,10 @@
                 <slot name="status"></slot>
             </span>
             <span class="list-item-link w-10">
-                <svg class="list-item-cheveron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path
-                        d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+                <svg v-if="!$slots['link-icon']" class="list-item-cheveron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/>
+                </svg>
+                <slot name="link-icon"></slot>
             </span>
         </a>
         <span class="list-item-container" v-else>
@@ -28,7 +30,7 @@
             </span>
             <span class="flex-1">
                 <span class="block text-md font-bold"><slot name="title"></slot></span>
-                <span class="block text-sm font-light"><slot name="sub-title"></slot></span>
+                <span class="block text-sm font-light text-justify word-break-word"><slot name="sub-title"></slot></span>
             </span>
 
             <span class="flex justify-center items-center" v-if="$slots.status">
@@ -47,6 +49,11 @@
             url: {
                 default() {
                     return false
+                }
+            },
+            target: {
+                default() {
+                    return '_self'
                 }
             }
         }
