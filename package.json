@@ -1,7 +1,6 @@
 {
-    "name": "osmaviation-brand-components",
-    "version": "0.1.0",
-    "private": true,
+    "name": "@osmaviation/brand-components",
+    "version": "1.0.0",
     "main": "index.js",
     "scripts": {
       "docs:dev": "vuepress dev docs",
