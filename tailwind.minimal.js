@@ -86,10 +86,6 @@ module.exports = {
     screens: {
         'sm': '576px',
         'md': '768px',
-        'lg': '992px',
-        'xl': '1200px',
-        'xxl': '1700px',
-        '3xl': '2000px',
     },
 
 
@@ -544,7 +540,6 @@ module.exports = {
         '20': '5rem',
         '24': '6rem',
         '32': '8rem',
-        '36': '9rem'
     },
 
 
@@ -578,10 +573,7 @@ module.exports = {
         '16': '4rem',
         '20': '5rem',
         '24': '6rem',
-        '28': '7rem',
         '32': '8rem',
-        '36': '9rem',
-        '40': '10rem',
         'head': '150px'
     },
 
@@ -738,58 +730,58 @@ module.exports = {
     | Here is where you control which modules are generated and what variants are
     | generated for each of those modules.
     |
-    | Currently supported variants: 'responsive', 'hover', 'focus'
+    | Currently supported variants: 'hover', 'focus'
     |
     | To disable a module completely, use `false` instead of an array.
     |
     */
 
     modules: {
-        appearance: ['responsive', 'hover', 'group-hover', 'focus'],
-        backgroundAttachment: ['responsive', 'hover', 'group-hover', 'focus'],
-        backgroundColors: ['responsive', 'hover', 'group-hover', 'focus'],
-        backgroundPosition: ['responsive', 'hover', 'group-hover', 'focus'],
-        backgroundRepeat: ['responsive', 'hover', 'group-hover', 'focus'],
-        backgroundSize: ['responsive', 'hover', 'group-hover', 'focus'],
-        borderColors: ['responsive', 'hover', 'group-hover', 'focus'],
-        borderRadius: ['responsive', 'hover', 'group-hover', 'focus'],
-        borderStyle: ['responsive', 'hover', 'group-hover', 'focus'],
-        borderWidths: ['responsive', 'hover', 'group-hover', 'focus'],
-        cursor: ['responsive', 'hover', 'group-hover', 'focus'],
-        display: ['responsive', 'hover', 'group-hover', 'focus'],
-        flexbox: ['responsive', 'hover', 'group-hover', 'focus'],
-        float: ['responsive', 'hover', 'group-hover', 'focus'],
-        fonts: ['responsive', 'hover', 'group-hover', 'focus'],
-        fontWeights: ['responsive', 'hover', 'group-hover', 'focus'],
-        height: ['responsive', 'hover', 'group-hover', 'focus'],
-        leading: ['responsive', 'hover', 'group-hover', 'focus'],
-        lists: ['responsive', 'hover', 'group-hover', 'focus'],
-        margin: ['responsive', 'hover', 'group-hover', 'focus'],
-        maxHeight: ['responsive', 'hover', 'group-hover', 'focus'],
-        maxWidth: ['responsive', 'hover', 'group-hover', 'focus'],
-        minHeight: ['responsive', 'hover', 'group-hover', 'focus'],
-        minWidth: ['responsive', 'hover', 'group-hover', 'focus'],
-        negativeMargin: ['responsive', 'hover', 'group-hover', 'focus'],
-        opacity: ['responsive', 'hover', 'group-hover', 'focus'],
-        overflow: ['responsive', 'hover', 'group-hover', 'focus'],
-        padding: ['responsive', 'hover', 'group-hover', 'focus'],
-        pointerEvents: ['responsive', 'hover', 'group-hover', 'focus'],
-        position: ['responsive', 'hover', 'group-hover', 'focus'],
-        resize: ['responsive', 'hover', 'group-hover', 'focus'],
-        shadows: ['responsive', 'hover', 'group-hover', 'focus'],
+        appearance: ['hover', 'group-hover', 'focus'],
+        backgroundAttachment: ['hover', 'group-hover', 'focus'],
+        backgroundColors: ['hover', 'group-hover', 'focus'],
+        backgroundPosition: ['hover', 'group-hover', 'focus'],
+        backgroundRepeat: ['hover', 'group-hover', 'focus'],
+        backgroundSize: ['hover', 'group-hover', 'focus'],
+        borderColors: ['hover', 'group-hover', 'focus'],
+        borderRadius: ['hover', 'group-hover', 'focus'],
+        borderStyle: ['hover', 'group-hover', 'focus'],
+        borderWidths: ['hover', 'group-hover', 'focus'],
+        cursor: ['hover', 'group-hover', 'focus'],
+        display: ['hover', 'group-hover', 'focus'],
+        flexbox: ['hover', 'group-hover', 'focus'],
+        float: ['hover', 'group-hover', 'focus'],
+        fonts: ['hover', 'group-hover', 'focus'],
+        fontWeights: ['hover', 'group-hover', 'focus'],
+        height: ['hover', 'group-hover', 'focus'],
+        leading: ['hover', 'group-hover', 'focus'],
+        lists: ['hover', 'group-hover', 'focus'],
+        margin: ['hover', 'group-hover', 'focus'],
+        maxHeight: ['hover', 'group-hover', 'focus'],
+        maxWidth: ['hover', 'group-hover', 'focus'],
+        minHeight: ['hover', 'group-hover', 'focus'],
+        minWidth: ['hover', 'group-hover', 'focus'],
+        negativeMargin: ['hover', 'group-hover', 'focus'],
+        opacity: ['hover', 'group-hover', 'focus'],
+        overflow: ['hover', 'group-hover', 'focus'],
+        padding: ['hover', 'group-hover', 'focus'],
+        pointerEvents: ['hover', 'group-hover', 'focus'],
+        position: ['hover', 'group-hover', 'focus'],
+        resize: ['hover', 'group-hover', 'focus'],
+        shadows: ['hover', 'group-hover', 'focus'],
         svgFill: [],
         svgStroke: [],
-        textAlign: ['responsive', 'hover', 'group-hover', 'focus'],
-        textColors: ['responsive', 'hover', 'group-hover', 'focus'],
-        textSizes: ['responsive', 'hover', 'group-hover', 'focus'],
-        textStyle: ['responsive', 'hover', 'group-hover', 'focus'],
-        tracking: ['responsive', 'hover', 'group-hover', 'focus'],
-        userSelect: ['responsive', 'hover', 'group-hover', 'focus'],
-        verticalAlign: ['responsive', 'hover', 'group-hover', 'focus'],
-        visibility: ['responsive', 'hover', 'group-hover', 'focus'],
-        whitespace: ['responsive', 'hover', 'group-hover', 'focus'],
-        width: ['responsive', 'hover', 'group-hover', 'focus'],
-        zIndex: ['responsive', 'hover', 'group-hover', 'focus'],
+        textAlign: ['hover', 'group-hover', 'focus'],
+        textColors: ['hover', 'group-hover', 'focus'],
+        textSizes: ['hover', 'group-hover', 'focus'],
+        textStyle: ['hover', 'group-hover', 'focus'],
+        tracking: ['hover', 'group-hover', 'focus'],
+        userSelect: ['hover', 'group-hover', 'focus'],
+        verticalAlign: ['hover', 'group-hover', 'focus'],
+        visibility: ['hover', 'group-hover', 'focus'],
+        whitespace: ['hover', 'group-hover', 'focus'],
+        width: ['hover', 'group-hover', 'focus'],
+        zIndex: ['hover', 'group-hover', 'focus'],
     },
 
     /*
@@ -810,7 +802,7 @@ module.exports = {
 
 
     plugins: [
-        require('./plugins/object-fit'),
+        require('./plugins/object-fit.js'),
         require('tailwindcss-spinner')({
             name: 'spinner-blue', // change class name
             color: 'blue', // color from config to make it
@@ -826,13 +818,13 @@ module.exports = {
                 '4/3': [4, 3],
                 '21/9': [21, 9],
             },
-            variants: ['responsive', 'hover'],
+            variants: ['hover'],
         }),
         require('tailwindcss-plugins/gradients')({
             gradients: {
                 'app': [colors['blue-light'], colors['blue']],
             },
-            variants: ['responsive', 'hover']
+            variants: ['hover']
         }),
 
         // ...

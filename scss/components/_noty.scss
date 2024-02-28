@@ -1,0 +1,36 @@
+.noty_theme__osm.noty_bar {
+    margin: 4px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.noty_theme__osm.noty_bar .noty_body {
+    padding: 1.5rem 0.75rem;
+    font-size: 1rem;
+}
+
+.noty_theme__osm.noty_bar .noty_buttons {
+    padding: 0.75rem;
+}
+
+.noty_theme__osm.noty_type__alert,
+.noty_theme__osm.noty_type__notification {
+    @apply bg-white border-b border-grey-light text-black;
+}
+
+.noty_theme__osm.noty_type__warning {
+    @apply bg-orange border-b border-orange-dark text-white;
+}
+
+.noty_theme__osm.noty_type__error {
+    @apply bg-red border-b border-red-dark text-white;
+}
+
+.noty_theme__osm.noty_type__info,
+.noty_theme__osm.noty_type__information {
+    @apply bg-lochmara-dark border-b border-lochmara-dark text-white;
+}
+
+.noty_theme__osm.noty_type__success {
+    @apply bg-green border-b border-green-dark text-white;
+}

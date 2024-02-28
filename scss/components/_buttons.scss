@@ -1,116 +1,103 @@
+// -----------------------------------------------------------------------------
+// General Button styling
+// -----------------------------------------------------------------------------
 .btn {
     @apply .inline-block .font-heading .text-sm .border .font-bold .uppercase .px-8 .py-4 .no-underline;
     transition: color .5s ease, background-color .5s ease, border-color .5s ease;
+
     &--sm {
         @apply .inline-block .font-heading .text-xs .border .font-bold .uppercase .px-4 .py-2 .no-underline;
     }
+
+
+    // -------------------------------------------------------------------------
+    // Solid Background Colored Variants
+    // -------------------------------------------------------------------------
     &--colored {
         &__blue {
-            @apply .border-blue .text-white .bg-blue;
-            &:hover {
-                @apply .bg-blue-dark .border-blue-dark .text-white;
-            }
+            @include solid-button-variant('blue');
         }
+
         &__comet {
-            @apply .border-comet .text-white .bg-comet;
-            &:hover {
-                @apply .border-comet-dark .bg-comet-dark .text-white;
-            }
+            @include solid-button-variant('comet');
         }
+
         &__secondary {
-            @apply .border-secondary .text-white .bg-secondary;
-            &:hover {
-                @apply .border-secondary-dark .bg-secondary-dark .text-white;
-            }
+            @include solid-button-variant('secondary');
         }
+
         &__lochmara {
-            @apply .border-lochmara .text-white .bg-lochmara;
-            &:hover {
-                @apply .border-lochmara-dark .bg-lochmara-dark .text-white;
-            }
+            @include solid-button-variant('lochmara');
         }
+
         &__summer {
-            @apply .border-summer .text-white .bg-summer;
-            &:hover {
-                @apply .border-summer-dark .bg-summer-dark .text-white;
-            }
+            @include solid-button-variant('summer');
         }
+
         &__grey {
-            @apply .border-brand-grey .text-blue .bg-brand-grey;
-            &:hover {
-                @apply .border-brand-grey-dark .bg-brand-grey-dark .text-blue;
-            }
+            @include solid-button-variant('grey', 'black');
         }
+
         &__red {
-            @apply .border-red .text-white .bg-red;
-            &:hover {
-                @apply .bg-red-dark .border-red-dark .text-white;
-            }
+            @include solid-button-variant('red');
         }
+
         &__green {
-            @apply .border-green .text-white .bg-green;
-            &:hover {
-                @apply .bg-green-dark .border-green-dark .text-white;
-            }
+            @include solid-button-variant('green');
         }
     }
+
+
+    // -------------------------------------------------------------------------
+    // Outline Variants
+    // -------------------------------------------------------------------------
     &--outline {
         &__blue {
-            @apply .border-blue .text-blue;
-            &:hover {
-                @apply .bg-blue .text-white
-            }
+            @include outline-button-variant('blue');
         }
+
         &__comet {
-            @apply .border-comet .text-comet;
-            &:hover {
-                @apply .bg-comet .text-white
-            }
+            @include outline-button-variant('comet');
         }
+
         &__secondary {
-            @apply .border-secondary .text-secondary;
-            &:hover {
-                @apply .bg-secondary .text-white
-            }
+            @include outline-button-variant('secondary');
         }
+
         &__lochmara {
-            @apply .border-lochmara .text-lochmara;
-            &:hover {
-                @apply .bg-lochmara .text-white
-            }
+            @include outline-button-variant('lochmara');
         }
+
         &__summer {
-            @apply .border-summer .text-summer;
-            &:hover {
-                @apply .bg-summer .text-white
-            }
+            @include outline-button-variant('summer');
         }
+
         &__grey {
-            @apply .border-brand-grey .text-brand-grey-darker;
-            &:hover {
-                @apply .bg-brand-grey .text-black
-            }
+            @include outline-button-variant('grey', 'black');
         }
+
         &__red {
-            @apply .border-red .text-red;
-            &:hover {
-                @apply .bg-red .text-white
-            }
+            @include outline-button-variant('red');
         }
+
         &__green {
-            @apply .border-green .text-green;
-            &:hover {
-                @apply .bg-green .text-white
-            }
+            @include outline-button-variant('green');
         }
     }
+
+    // -------------------------------------------------------------------------
+    // Inverted Variant
+    // -------------------------------------------------------------------------
     &--invert {
         @apply .border-white .text-blue .bg-white;
+
         &:hover {
             @apply .text-white .bg-blue;
         }
+
         &__outline {
             @apply .border-white .text-white;
+
             &:hover {
                 @apply .bg-white .text-blue;
             }
